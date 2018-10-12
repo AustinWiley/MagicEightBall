@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Events!</title>
+    <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet">
+ <title>Magic 8 Ball</title>
+ <style>
+ body {
+     box-sizing: border-box;
+     background-color: #000000;
+     font-family: 'Fascinate Inline', cursive;
+     /* font-family: 'PT Sans', sans-serif; */
+ }
+ header, h3, h2 {
+     color: white;
+     margin: 0 auto;
+     text-align: center;
+ }
+
+ h1 {
+     font-size: 60px;
+     margin-bottom: 5px;
+ }
+ .container {
+     
+     width: 800px;
+     margin: auto;
+     justify-content: center;
+ }
+
+
+ h3 {
+     font-family: 'Rajdhani', sans-serif;
+     font-size: 20px;
+     border-radius: 15px;
+     position: relative;
+     top:80px;
+     width: fit-content;
+     background-color: #00249e;
+     color:white;
+     padding: 20px;
+     margin: auto;
+     box-shadow: 0px 0px 80px #00249e;
+ }
+
+ img {
+     width: 100%;
+ }
+ </style>
+  </head>
+  <body>
+      <header class="container">
+          <h1 class="my-header">The Magic 8 Ball</h1>
+          <h2 id="game-text">ask the magic 8 ball a question then press any key</h2>
+      </header>
+      <div class="container main">
+          <h3 id="oricle-text">...</h3>
+          <img class="8ball" src="http://anne-crea.com/annecrea/15369-magic-8-ball-wallpaper.jpg" alt="magic 8 ball">
+      </div>     
+    <script type="text/javascript">
+         var oricleAnswers = ["NO", "I dont think so", "Absolutely", "........Did you ever realize that Mary Poppins is a Witch.", "Oh yes, Definately!(Sarcasm)......", "Ira thinks so....", "ill teach your grandmother to suck eggs...", "thats not a real question", "I Believe so", "Did grizzly Adams have a beard?", "As sure as the sun shines", "maybe", "Yes", ".....Sorry, ask again I just farted a huge fart", "you kiss your mother with that mouth?", "Never", "for sure!", "You'r making me feel uncomfortable", "Did you just Shart in your pants?", "hmmmmm.........", "sorry, I cant tell you that", "you'r killing me small's", "that is beyond my scope of practice", "if you pay me in bitcoin I will tell you", "if you think so.....", "wait till next year"];
+         var oricleText = document.getElementById("oricle-text");
+        document.onkeyup = function(event) {
+       var oricle = oricleAnswers[Math.floor(Math.random() * oricleAnswers.length)];
+    //    alert(oricle);
+       oricleText.textContent = oricle;
+   }
+
+    </script>
+
+  </body>
+</html>
